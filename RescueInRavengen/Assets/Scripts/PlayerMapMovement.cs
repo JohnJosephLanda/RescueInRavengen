@@ -23,7 +23,7 @@ public class PlayerMapMovement : MonoBehaviour
         rb.velocity = new Vector2(direction.x, direction.y);
 
         animator.SetFloat("Horizontal", direction.x);
-        animator.SetFloat("Vertical", direction.y);
+        animator.SetFloat("Vertical", -direction.y);
         animator.SetFloat("Speed", direction.sqrMagnitude);
     }
 }

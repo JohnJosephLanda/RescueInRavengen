@@ -13,7 +13,7 @@ public class PlayerMapMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        animator.SetBoolean("HasKnife", false);
+        animator.SetBool("HasKnife", false);
     }
 
     // Update is called once per frame

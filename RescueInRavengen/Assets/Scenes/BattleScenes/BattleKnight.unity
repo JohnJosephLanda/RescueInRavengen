@@ -179,6 +179,7 @@ GameObject:
   m_Component:
   - component: {fileID: 192922873}
   - component: {fileID: 192922872}
+  - component: {fileID: 192922874}
   m_Layer: 0
   m_Name: dave
   m_TagString: Untagged
@@ -253,6 +254,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &192922874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192922871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4733cbf7e84cb4f44a8b0890f5d2e894, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &426178405
 GameObject:
   m_ObjectHideFlags: 0
@@ -263,6 +276,7 @@ GameObject:
   m_Component:
   - component: {fileID: 426178407}
   - component: {fileID: 426178406}
+  - component: {fileID: 426178408}
   m_Layer: 0
   m_Name: knight
   m_TagString: Untagged
@@ -337,6 +351,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &426178408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426178405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2d2420b4cc50794aa4274a539b0ad33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1010428407
 GameObject:
   m_ObjectHideFlags: 0

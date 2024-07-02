@@ -21,7 +21,6 @@ public class battlescriptforcharacter : MonoBehaviour
 
     void Start()
     {
-        SceneManager.LoadScene("battlescene");
         transform.position = new Vector3(-8, 0, 0);
     }
     void Update()

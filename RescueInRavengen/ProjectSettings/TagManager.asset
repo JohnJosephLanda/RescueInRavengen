@@ -6,6 +6,9 @@ TagManager:
   tags:
   - DaveHouse
   - Castle
+  - Path
+  - KingDialogue1
+  - ThroneRoom
   layers:
   - Default
   - TransparentFX

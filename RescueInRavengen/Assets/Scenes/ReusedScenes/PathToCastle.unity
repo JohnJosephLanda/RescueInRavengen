@@ -6231,7 +6231,7 @@ GameObject:
   - component: {fileID: 1275369540}
   m_Layer: 0
   m_Name: CastleTrigger
-  m_TagString: Castle
+  m_TagString: ThroneRoom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6386,11 +6386,11 @@ GameObject:
   - component: {fileID: 1726351088}
   - component: {fileID: 1726351092}
   - component: {fileID: 1726351091}
-  - component: {fileID: 1726351095}
   - component: {fileID: 1726351094}
   - component: {fileID: 1726351090}
   - component: {fileID: 1726351089}
   - component: {fileID: 1726351093}
+  - component: {fileID: 1726351095}
   m_Layer: 0
   m_Name: DaveTopDownKnifeless
   m_TagString: Untagged
@@ -6623,7 +6623,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1726351087}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9970155eeca562e41bd8a760b4b90756, type: 3}
+  m_Script: {fileID: 11500000, guid: 8bfd80c8b402f4043a0709b16a8fae72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1864200441

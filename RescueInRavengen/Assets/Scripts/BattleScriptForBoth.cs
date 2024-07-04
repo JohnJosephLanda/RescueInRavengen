@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 public class BattleScriptForBoth : MonoBehaviour
 {
     //create two battlescripts; one for character, another for enemy
-    public int characterhealth = 1000;
-    public int characterattack = 100;
-    public int enemyhealth = 2000;
-    public int enemyattack = 25;
+    public int characterhealth = 6;
+    public int characterattack = 2;
+    public int enemyhealth = 10;
+    public int enemyattack = 1;
     [SerializeField] int enemyAttackFrames = 2000;
     int enemyFramesSinceAttack = 0;
     public GameObject player;

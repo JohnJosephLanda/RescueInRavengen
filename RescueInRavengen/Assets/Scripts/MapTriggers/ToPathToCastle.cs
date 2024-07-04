@@ -9,5 +9,8 @@ public class ToPathToCastle : MonoBehaviour
         if (other.gameObject.CompareTag("Path")) {
             SceneManager.LoadScene("Scenes/ReusedScenes/PathToCastle");
         }
+        if (other.gameObject.CompareTag("PathTop")) {
+            SceneManager.LoadScene("Scenes/ReusedScenes/PathToCastleFromCastle");
+        }
     }
 }

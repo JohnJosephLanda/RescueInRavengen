@@ -7,7 +7,7 @@ public class ToDaveHouse : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.CompareTag("DaveHouse")) {
-            SceneManager.LoadScene("Scenes/ReusedScenes/DaveHouse");
+            SceneManager.LoadScene("Scenes/ReusedScenes/DaveHouseFromMap");
         }
     }
 }

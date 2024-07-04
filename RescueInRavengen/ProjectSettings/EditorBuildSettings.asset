@@ -18,9 +18,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainPage.unity
     guid: 3127ef243dec64f4fac68699b52699c2
   - enabled: 1
-    path: Assets/Scenes/Day2/Forest.unity
-    guid: 4508f76e16c16fb4895d566abae6af99
-  - enabled: 1
     path: Assets/Scenes/ReusedScenes/DaveHouse.unity
     guid: 86ae6778cd2f0d44c872d13ea1b10dc5
   - enabled: 1
@@ -38,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BattleScenes/BattleKnight.unity
     guid: 8bf370c32095c58458d11092996f1e7d
+  - enabled: 1
+    path: Assets/Scenes/Dialogue/KingDialogue.unity
+    guid: 4d993369702611a41b87beee556bcb92
   m_configObjects: {}

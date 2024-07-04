@@ -320,7 +320,7 @@ MonoBehaviour:
     help.'
   - 'Dave: No problem.'
   textSpeed: 0.1
-  nextScene: Scenes/ReusedScenes/DaveHouse
+  nextScene: Scenes/Credits
 --- !u!114 &204738665
 MonoBehaviour:
   m_ObjectHideFlags: 0

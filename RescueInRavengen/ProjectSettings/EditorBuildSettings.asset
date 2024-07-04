@@ -50,4 +50,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Day1/CastleNoKnight.unity
     guid: 97e2f07ef69793c4dad3720384d21464
+  - enabled: 1
+    path: Assets/Scenes/ReusedScenes/DaveHouseFromMap.unity
+    guid: 535ecd3818bb7644d84196de5c66c6c7
+  - enabled: 1
+    path: Assets/Scenes/Dialogue/OpeningDialogue.unity
+    guid: dfe9cfb22608cbe4eadcf978921c265a
   m_configObjects: {}

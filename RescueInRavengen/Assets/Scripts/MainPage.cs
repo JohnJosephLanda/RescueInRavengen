@@ -6,6 +6,6 @@ using UnityEngine.SceneManagement;
 public class MainPage : MonoBehaviour
 {
     public void button() {
-        SceneManager.LoadScene("Scenes/ReusedScenes/DaveHouse");
+        SceneManager.LoadScene("Scenes/Dialogue/OpeningDialogue");
     }
 }

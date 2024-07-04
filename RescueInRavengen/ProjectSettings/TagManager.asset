@@ -10,6 +10,8 @@ TagManager:
   - KingDialogue1
   - ThroneRoom
   - PathTop
+  - PrincessDialogue
+  - KnightFight
   layers:
   - Default
   - TransparentFX

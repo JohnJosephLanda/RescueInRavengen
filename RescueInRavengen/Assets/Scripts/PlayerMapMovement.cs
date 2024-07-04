@@ -26,7 +26,7 @@ public class PlayerMapMovement : MonoBehaviour
                 sprint = 1;
             }
         }
-        direction = new Vector2(Input.GetAxis("Horizontal")*sprint*Time.deltaTime*moveSpeed, Input.GetAxis("Vertical")*sprint*Time.deltaTime*moveSpeed);
+        direction = new Vector2(Input.GetAxis("Horizontal")*sprint*Time.deltaTime*moveSpeed,Input.GetAxis("Vertical")*sprint*Time.deltaTime*moveSpeed);
         rb.velocity = new Vector2(direction.x, direction.y);
 
         animator.SetFloat("Horizontal", direction.x);

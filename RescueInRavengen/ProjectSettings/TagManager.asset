@@ -9,6 +9,7 @@ TagManager:
   - Path
   - KingDialogue1
   - ThroneRoom
+  - PathTop
   layers:
   - Default
   - TransparentFX

@@ -10,7 +10,7 @@ public class BattleScriptForBoth : MonoBehaviour
     public int characterattack = 100;
     public int enemyhealth = 2000;
     public int enemyattack = 25;
-    [SerializeField] int enemyAttackFrames = 100;
+    [SerializeField] int enemyAttackFrames = 2000;
     int enemyFramesSinceAttack = 0;
     public GameObject player;
     public GameObject enemy;
@@ -20,31 +20,18 @@ public class BattleScriptForBoth : MonoBehaviour
 
     void Start()
     {
-        
+        StartCoroutine("playerBattle");
+        StartCoroutine("enemyBattle");
     }
     void Update() {
+        
+    }
+    IEnumerator playerBattle() {
         if (Input.GetKey(KeyCode.Space)) {
-            for (int i = 0; i < 32; i++)
-            {
-                player.transform.Translate(.05f,0,0);
-            }
-            //plus or minus 8 for x pos for character and enemy
+            player.transform.Translate(2.5f,0,0);
             enemyhealth = enemyhealth - characterattack;
-            for (int i = 0; i < 32; i++)
-            {
-                player.transform.Translate(-.05f,0,0);
-            }
-        }
-        if (enemyAttackFrames <= enemyFramesSinceAttack) {
-            for (int i = 0; i < 32; i++)
-            {
-                enemy.transform.Translate(-.05f,0,0);
-            }
-            characterhealth = characterhealth - enemyattack;
-            for (int i = 0; i < 32; i++)
-            {
-                enemy.transform.Translate(.05f,0,0);
-            }
+            yield return new WaitForSeconds(.1f);
+            player.transform.Translate(-2.5f,0,0);
         }
 
         if (enemyhealth <= 0)
@@ -52,11 +39,23 @@ public class BattleScriptForBoth : MonoBehaviour
             enemyhealth = 0;
             SceneManager.LoadScene("BattleWin");
         }
+        StartCoroutine("playerBattle");
+    }
+    
+    IEnumerator enemyBattle() {
+        if (enemyAttackFrames <= enemyFramesSinceAttack) {
+            enemy.transform.Translate(-2.5f,0,0);
+            characterhealth = characterhealth - enemyattack;
+            yield return new WaitForSeconds(.1f);
+            enemy.transform.Translate(2.5f,0,0);
+        }
+
         if (characterhealth <= 0)
         {
             characterhealth = 0;
             SceneManager.LoadScene("BattleLoss");
         }
         enemyFramesSinceAttack++;
+        StartCoroutine("enemyBattle");
     }
 }

@@ -17,10 +17,14 @@ public class BattleScriptForBoth : MonoBehaviour
     private bool playerMoved;
     private bool enemyMoved;
     public AudioSource hitSound;
+    public Rigidbody2D playerRB;
+    public Rigidbody2D enemyRB;
 
     void Start() {
         enemyMoved = false;
         playerMoved = false;
+        playerRB = player.GetComponent<Rigidbody2D>();
+        enemyRB = enemy.GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -28,16 +32,26 @@ public class BattleScriptForBoth : MonoBehaviour
         StartCoroutine("playerBattle");
         StartCoroutine("enemyBattle");
         if (playerMoved) {
-            player.transform.Translate(2.5f,0,0);
-            player.transform.Translate(-2.5f,0,0);
+            playerRB.velocity = new Vector2(20f,0);
             playerMoved = false;
             hitSound.Play();
         }
+        if (player.transform.position.x > -2) {
+            playerRB.velocity = new Vector2(-5f,0);
+        }
+        if (player.transform.position.x < -7) {
+            playerRB.velocity = new Vector2(0,0);
+        }
         if (enemyMoved) {
-            enemy.transform.Translate(-2.5f,0,0);
-            enemy.transform.Translate(2.5f,0,0);
+            enemyRB.velocity = new Vector2(-20f,0);
             enemyMoved = false;
             hitSound.Play();
+        }
+        if (enemyRB.transform.position.x < 2) {
+            enemyRB.velocity = new Vector2(5f,0);
+        }
+        if (enemyRB.transform.position.x > 7) {
+            enemyRB.velocity = new Vector2(0,0);
         }
     }
     

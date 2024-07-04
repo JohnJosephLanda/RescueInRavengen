@@ -38,4 +38,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dialogue/KingDialogue.unity
     guid: 4d993369702611a41b87beee556bcb92
+  - enabled: 1
+    path: Assets/Scenes/Dialogue/PrincessDialogue.unity
+    guid: bc774610b76b77b40ab92feb2f3fd746
   m_configObjects: {}

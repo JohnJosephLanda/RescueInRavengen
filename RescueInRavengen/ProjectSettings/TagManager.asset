@@ -12,6 +12,9 @@ TagManager:
   - PathTop
   - PrincessDialogue
   - KnightFight
+  - h3
+  - h2
+  - h1
   layers:
   - Default
   - TransparentFX

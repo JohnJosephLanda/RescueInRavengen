@@ -6,30 +6,46 @@ using UnityEngine.SceneManagement;
 public class BattleScriptForBoth : MonoBehaviour
 {
     //create two battlescripts; one for character, another for enemy
-    public int characterhealth = UICode.characterhealth;
+    public static int characterhealth = UICode.characterhealth;
     public int characterattack = 2;
     public int enemyhealth = 10;
     public int enemyattack = 1;
-    [SerializeField] int enemyAttackFrames = 3000;
-    int enemyFramesSinceAttack = 0;
+    [SerializeField] int enemyAttackFrames = 100;
+    public int enemyFramesSinceAttack = 0;
     public GameObject player;
     public GameObject enemy;
+    private bool playerMoved;
+    private bool enemyMoved;
+    public AudioSource hitSound;
 
+    void Start() {
+        enemyMoved = false;
+        playerMoved = false;
+    }
 
-    //according to unity discussions, adding public static in front of something makes in global
-
-    void Start()
+    void Update()
     {
         StartCoroutine("playerBattle");
         StartCoroutine("enemyBattle");
+        if (playerMoved) {
+            player.transform.Translate(2.5f,0,0);
+            player.transform.Translate(-2.5f,0,0);
+            playerMoved = false;
+            hitSound.Play();
+        }
+        if (enemyMoved) {
+            enemy.transform.Translate(-2.5f,0,0);
+            enemy.transform.Translate(2.5f,0,0);
+            enemyMoved = false;
+            hitSound.Play();
+        }
     }
     
     IEnumerator playerBattle() {
-        if (Input.GetKey(KeyCode.Space)) {
-            player.transform.Translate(2.5f,0,0);
+        if (Input.GetKeyDown(KeyCode.Space)) {
             enemyhealth = enemyhealth - characterattack;
+            playerMoved = true;
             yield return new WaitForSeconds(.1f);
-            player.transform.Translate(-2.5f,0,0);
         }
 
         if (enemyhealth <= 0)
@@ -37,15 +53,15 @@ public class BattleScriptForBoth : MonoBehaviour
             enemyhealth = 0;
             SceneManager.LoadScene("BattleWin");
         }
-        StartCoroutine("playerBattle");
+        StopCoroutine("playerBattle");
     }
     
     IEnumerator enemyBattle() {
         if (enemyAttackFrames <= enemyFramesSinceAttack) {
-            enemy.transform.Translate(-2.5f,0,0);
+            enemyFramesSinceAttack = 0;
             characterhealth = characterhealth - enemyattack;
+            enemyMoved = true;
             yield return new WaitForSeconds(.1f);
-            enemy.transform.Translate(2.5f,0,0);
         }
 
         if (characterhealth <= 0)
@@ -54,6 +70,6 @@ public class BattleScriptForBoth : MonoBehaviour
             SceneManager.LoadScene("BattleLoss");
         }
         enemyFramesSinceAttack++;
-        StartCoroutine("enemyBattle");
+        StopCoroutine("enemyBattle");
     }
 }

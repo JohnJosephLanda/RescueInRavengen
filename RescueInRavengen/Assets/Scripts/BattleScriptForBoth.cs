@@ -10,7 +10,7 @@ public class BattleScriptForBoth : MonoBehaviour
     public int characterattack = 2;
     public int enemyhealth = 10;
     public int enemyattack = 1;
-    [SerializeField] int enemyAttackFrames = 2000;
+    [SerializeField] int enemyAttackFrames = 3000;
     int enemyFramesSinceAttack = 0;
     public GameObject player;
     public GameObject enemy;
@@ -23,9 +23,7 @@ public class BattleScriptForBoth : MonoBehaviour
         StartCoroutine("playerBattle");
         StartCoroutine("enemyBattle");
     }
-    void Update() {
-        
-    }
+    
     IEnumerator playerBattle() {
         if (Input.GetKey(KeyCode.Space)) {
             player.transform.Translate(2.5f,0,0);

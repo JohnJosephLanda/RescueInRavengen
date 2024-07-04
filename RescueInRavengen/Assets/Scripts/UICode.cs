@@ -38,7 +38,7 @@ public class UICode : MonoBehaviour {
         }
     }
 
-    void swordButton() {
+    public void swordButton() {
         animator.SetBool("hasKnife", !animator.GetBool("hasKnife"));
     }
 }

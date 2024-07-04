@@ -428,7 +428,7 @@ GameObject:
   - component: {fileID: 470775993}
   - component: {fileID: 470775992}
   m_Layer: 5
-  m_Name: Image
+  m_Name: glorpMeter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -770,7 +770,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1063217643}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1460940334}
+        m_TargetAssemblyTypeName: UICode, Assembly-CSharp
+        m_MethodName: swordButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1063217643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1332,9 +1344,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1190889688}
-  h1: {fileID: 612914712}
+  h1: {fileID: 1534516202}
   h2: {fileID: 747679509}
-  h3: {fileID: 1534516202}
+  h3: {fileID: 612914712}
   halfheart: {fileID: 21300000, guid: 1c7246dca8b5db444b8ce1d9b0697faa, type: 3}
   noheart: {fileID: 21300000, guid: 4ec855242f15f224d87455ad6d38d476, type: 3}
 --- !u!1 &1475809166

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class BattleScriptForBoth : MonoBehaviour
 {
     //create two battlescripts; one for character, another for enemy
-    public int characterhealth = 6;
+    public int characterhealth = UICode.characterhealth;
     public int characterattack = 2;
     public int enemyhealth = 10;
     public int enemyattack = 1;
